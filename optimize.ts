@@ -1,10 +1,10 @@
-interface fun {
+interface Ifun {
     Id: number;
     name: string;
     show();
 }
 
-class Organizer implements fun {
+class Organizer implements Ifun {
 
     Id: number;
     name: string;
@@ -20,7 +20,7 @@ class Organizer implements fun {
     }
 }
 
-class AEvent extends Organizer implements fun{
+class AEvent extends Organizer implements Ifun{
     description: string;
     startTime: string;
     constructor(Id: number, name: string, description: string, startTime: string){
@@ -40,7 +40,7 @@ class AEvent extends Organizer implements fun{
 
 }
 
-class Venue extends Organizer implements fun{
+class Venue extends Organizer implements Ifun{
     description: string
     address: string;
     constructor(Id: number, name: string, description: string, address: string){
