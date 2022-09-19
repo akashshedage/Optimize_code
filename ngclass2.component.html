@@ -1,0 +1,27 @@
+<h1 [ngStyle]="{'color':'blue'}"> ng Class Assignment</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <td>
+            <h2 [ngStyle]="{'color':'cadetblue'}"> Employee Details </h2>
+        </td>
+    </tr>
+    </thead>
+
+    <tbody >
+        <tr *ngFor="let emp of employee">
+            <td [ngClass]="{
+        'text-success':emp.company === 'TCS',
+        'text-primary':emp.company === 'Infosys',
+        'text-danger':emp.company === 'HCL',
+        'text-warning':emp.company === 'Wipro'
+    }">
+                Employee Name:- {{emp.name}}, Employee ID:- {{emp.empId}}, Company:- {{emp.company}}, Designation:-
+                {{emp.designation}}, Salary:- {{emp.salary}}, Location:- {{emp.location}}
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
